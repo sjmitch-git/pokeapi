@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@radix-ui/themes": "^3.0.2",
+    "axios": "^1.6.8",
     "next": "14.2.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
     "@types/node": "^20",
