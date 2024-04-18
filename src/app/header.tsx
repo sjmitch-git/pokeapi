@@ -1,22 +1,27 @@
-import Image from "next/image";
-import Link from "next/link";
-//import { useRouter } from "next/navigation";
+import Image from 'next/image'
+import Link from 'next/link'
 
-import Container from "./container";
+import Container from './container'
 
 export default function Header() {
-  /*  const router = useRouter();
-  console.log(router); */
-  return (
-    <header>
-      <Container>
-        <figure className="max-w-md mx-auto aspect-[2.726/1] mb-4">
-          <Link href="/" className="relative w-full h-full inline-block">
-            <Image src="/logo.svg" alt="Pokémon Logo" fill priority />
-          </Link>
-        </figure>
-        <p className="text-center italic">Explore the world of Pokémon!</p>
-      </Container>
-    </header>
-  );
+	return (
+		<header>
+			<Container>
+				<figure className='mx-auto mb-4 aspect-[2.726/1] max-w-md'>
+					<Link
+						href='/'
+						className='relative inline-block h-full w-full'
+					>
+						<Image
+							src='/logo.svg'
+							alt='Pokémon Logo'
+							fill
+							priority
+						/>
+					</Link>
+				</figure>
+				<p className='text-center italic'>Explore the world of Pokémon!</p>
+			</Container>
+		</header>
+	)
 }
