@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Title } from '@/components'
+import { Heading } from '@/components'
 import { PokemonData } from '@/types'
 
 const cache: Record<string, Promise<any>> = {}
@@ -10,7 +10,7 @@ export default async function Detail({ params }: { params: { id: string } }) {
 
 	return (
 		<div>
-			<Title title={data.name} />
+			<Heading label={data.name} />
 			<nav className='flex gap-8'>
 				<Link href='./'>Back to results</Link>
 			</nav>

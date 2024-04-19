@@ -1,13 +1,21 @@
 import Link from 'next/link'
 
-import { Title, List } from '@/components'
+import { Heading } from '@/components'
 
 export default function Home() {
 	return (
 		<div>
-			<Title title='Explore the world of Pokémon!' />
+			<Heading
+				label='Explore the world of Pokémon!'
+				className='text-center'
+			/>
 			<div className='py-36 text-center'>
-				<Link href='/list'>Search</Link>
+				<Link
+					href='/list'
+					className='btn bg-primary text-light'
+				>
+					Search
+				</Link>
 			</div>
 		</div>
 	)

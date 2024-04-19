@@ -1,12 +1,15 @@
 import Link from 'next/link'
 
 import Results from './results'
-import { Title } from '@/components'
+import { Heading } from '@/components'
 
 export default function List() {
 	return (
 		<div>
-			<Title title='List of Pokemons' />
+			<Heading
+				label='List of Pokemons'
+				className='bg-red-200'
+			/>
 			<Results />
 			<nav className='flex gap-8'>
 				<Link href='list/1'>First</Link>

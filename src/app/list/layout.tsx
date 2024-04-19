@@ -12,7 +12,7 @@ export default function ListLayout({
 			<Sidebar className='col-span-full md:col-span-1'>
 				<Filter />
 			</Sidebar>
-			<article className='col-span-full bg-slate-100 md:col-span-5'>{children}</article>
+			<article className='col-span-full md:col-span-5'>{children}</article>
 		</main>
 	)
 }
