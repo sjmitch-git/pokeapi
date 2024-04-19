@@ -20,7 +20,6 @@ export default function Header() {
 						/>
 					</Link>
 				</figure>
-				<p className='text-center italic'>Explore the world of Pokémon!</p>
 			</Container>
 		</header>
 	)
