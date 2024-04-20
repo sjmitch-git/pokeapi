@@ -1,16 +1,16 @@
 import Link from 'next/link'
 
+import FetchData from '@/utils/fetchData'
 import { Heading } from '@/components'
-import { PokemonData } from '@/types'
+import Detail from './detail'
 
-const cache: Record<string, Promise<any>> = {}
-
-export default async function Detail({ params }: { params: { id: string } }) {
-	const data = await getData(params.id)
+export default async function Page({ params }: { params: { id: string } }) {
+	const data = await FetchData(`pokemon/${params.id}`)
 
 	return (
 		<div>
 			<Heading label={data.name} />
+			<Detail data={data} />
 			<nav className='flex gap-8'>
 				<Link href='./'>Back to results</Link>
 			</nav>
@@ -18,12 +18,13 @@ export default async function Detail({ params }: { params: { id: string } }) {
 	)
 }
 
-async function getData(id: string) {
+/* async function getData(id: string) {
 	if (await cache[id]) {
 		return cache[id]
 	}
 
 	const fetchData = async () => {
+		console.log('ID', `https://pokeapi.co/api/v2/pokemon/${id}`)
 		const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
 		if (!res.ok) {
 			throw new Error('Failed to fetch data')
@@ -34,4 +35,4 @@ async function getData(id: string) {
 	const promise = fetchData()
 	cache[id] = promise
 	return promise
-}
+} */

@@ -1,0 +1,7 @@
+.card {
+	@apply relative flex flex-col border border-slate-200 p-4 shadow-md shadow-slate-400 hover:scale-105;
+}
+
+.cards {
+	@apply mb-8 grid gap-2 md:grid-cols-3 lg:grid-cols-4;
+}

@@ -1,21 +1,28 @@
-import Link from 'next/link'
+import { Result } from '@/types'
 
+import FetchData from '@/utils/fetchData'
+import getId from '@/utils/getId'
 import Results from './results'
 import { Heading } from '@/components'
 
-export default function List() {
+export default async function List({ searchParams }: { searchParams: { page: string | null } }) {
+	const limit = 12
+	const page = searchParams.page || '0'
+	const offset = (Number(searchParams.page) * limit).toString()
+
+	const data = await FetchData(`pokemon?offset=${offset}&limit=${limit}`)
+
+	data.results.map((item: Result) => {
+		item.id = getId(item.url)
+	})
+
 	return (
 		<div>
-			<Heading
-				label='List of Pokemons'
-				className='bg-red-200'
+			<Heading label='Pokémon Species' />
+			<Results
+				data={data}
+				page={Number(page)}
 			/>
-			<Results />
-			<nav className='flex gap-8'>
-				<Link href='list/1'>First</Link>
-				<Link href='list/2'>2nd</Link>
-				<Link href='list/3'>3rd</Link>
-			</nav>
 		</div>
 	)
 }

@@ -9,10 +9,10 @@ export default function ListLayout({
 }>) {
 	return (
 		<main className='grid min-h-full grid-cols-6 gap-4'>
-			<Sidebar className='col-span-full md:col-span-1'>
+			<Sidebar className='col-span-full lg:col-span-1'>
 				<Filter />
 			</Sidebar>
-			<article className='col-span-full md:col-span-5'>{children}</article>
+			<article className='col-span-full lg:col-span-5'>{children}</article>
 		</main>
 	)
 }
