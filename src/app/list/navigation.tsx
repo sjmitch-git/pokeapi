@@ -22,9 +22,6 @@ export default function Navigation({
 	const { navigation } = useAppContext()
 	const { setCurrent } = navigation
 
-	const currentPage = navigation.current
-	console.log('navigation', currentPage)
-
 	useEffect(() => {
 		setCurrent(page)
 	}, [page, setCurrent])
