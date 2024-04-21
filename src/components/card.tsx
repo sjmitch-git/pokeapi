@@ -19,13 +19,12 @@ export default function Card({ image, name, link, className = '' }: CardProps) {
 					alt={name}
 					fill
 					sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-					priority
 				/>
 			</figure>
 
 			<Link
 				href={link}
-				className='stretched-link'
+				className='stretched-link text-current'
 			>
 				<Heading
 					label={name}

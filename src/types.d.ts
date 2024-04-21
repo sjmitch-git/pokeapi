@@ -14,6 +14,7 @@ export interface Result {
 }
 
 export interface PokemonData {
+	id: string
 	name: string
 	abilities: Ability[]
 }

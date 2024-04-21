@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { API_SPECIES_COUNT, API_LIMIT } from '@/constants'
+
 export default function Navigation({
 	prev,
 	next,
@@ -11,7 +13,6 @@ export default function Navigation({
 	page: number
 	className?: string
 }) {
-	//console.log('page', page)
 	return (
 		<nav
 			className={`flex items-center justify-between border-b border-slate-700 pb-8 ${className}`}
@@ -25,6 +26,10 @@ export default function Navigation({
 						&#9664; Back
 					</Link>
 				)}
+			</div>
+
+			<div>
+				{page} / {Math.ceil(API_SPECIES_COUNT / API_LIMIT)}
 			</div>
 
 			<div>
