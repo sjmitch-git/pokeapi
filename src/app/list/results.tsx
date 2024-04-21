@@ -18,7 +18,7 @@ export default function Results({ data, page }: { data: ResultsData; page: numbe
 			<ul className='cards'>
 				{data?.results.map((item, _index) => (
 					<Card
-						key={item.id}
+						key={item.name}
 						name={item.name}
 						image={getImage(item.id)}
 						link={getLink(item.id)}

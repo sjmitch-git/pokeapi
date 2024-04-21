@@ -5,5 +5,5 @@ export default function Sidebar({
 	children: React.ReactNode
 	className?: string
 }) {
-	return <aside className={`bg-slate-100 ${className}`}>{children}</aside>
+	return <aside className={`${className}`}>{children}</aside>
 }
