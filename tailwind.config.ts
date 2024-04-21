@@ -10,7 +10,7 @@ const config: Config = {
 				info: 'var(--info-color)',
 				success: 'var(--success-color)',
 				warning: 'var(--warning-color)',
-				error: 'var(--danger-error)',
+				danger: 'var(--danger-error)',
 				light: 'var(--light-color)',
 				dark: 'var(--dark-error)',
 			},
