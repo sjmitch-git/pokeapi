@@ -2,13 +2,15 @@ import { ResultsData } from '@/types'
 import { Card } from '@/components'
 import Navigation from './navigation'
 
+import { SPRITE_PREFIX, SPRITE_SUFFIX } from '@/constants'
+
 export default function Results({ data, page }: { data: ResultsData; page: number }) {
 	const getLink = (id: string) => {
 		return `list/${id}`
 	}
 
 	const getImage = (id: string) => {
-		return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`
+		return `${SPRITE_PREFIX}${id}${SPRITE_SUFFIX}`
 	}
 
 	return (

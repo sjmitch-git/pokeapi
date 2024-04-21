@@ -10,7 +10,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 		<div>
 			<Heading label={data.name} />
 			<Detail data={data} />
-			<nav className='p-4 text-center'>{params.id && <GoBackLink id={params.id} />}</nav>
+			<nav className='p-4 text-center'>{params.id && <GoBackLink />}</nav>
 		</div>
 	)
 }
