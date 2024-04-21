@@ -23,13 +23,13 @@ export default function Navigation({
 						className='btn bg-secondary py-0 text-light'
 						href={`list?page=${page - 1}`}
 					>
-						&#9664; Back
+						&#9664; Prev
 					</Link>
 				)}
 			</div>
 
 			<div>
-				{page} / {Math.ceil(API_SPECIES_COUNT / API_LIMIT)}
+				{page + 1} / {Math.ceil(API_SPECIES_COUNT / API_LIMIT)}
 			</div>
 
 			<div>

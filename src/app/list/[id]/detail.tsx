@@ -59,7 +59,7 @@ export default function Detail({ data }: { data: PokemonData }) {
 							className='btn bg-secondary py-0 text-light'
 							href={`./${Number(data.id) - 1}`}
 						>
-							&#9664; Back
+							&#9664; Prev
 						</Link>
 					)}
 				</div>
