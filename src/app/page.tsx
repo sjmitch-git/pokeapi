@@ -14,7 +14,7 @@ export default function Home() {
 					href='/list'
 					className='btn bg-primary text-light'
 				>
-					Search
+					Browse
 				</Link>
 			</div>
 		</div>

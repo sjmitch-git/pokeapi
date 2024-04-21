@@ -1,11 +1,18 @@
+'use client'
+
 import Link from 'next/link'
 
-import { API_LIMIT } from '@/constants'
+import { useAppContext } from '@/providers/app-provider'
+
+//import { API_LIMIT } from '@/constants'
 
 const GoBackLink = ({ id }: { id: string }) => {
-	const getPage = (): string => (Math.ceil(Number(id) / API_LIMIT) - 1).toString()
+	const { navigation } = useAppContext()
+	const { current } = navigation
 
-	return <Link href={`../list?page=${getPage()}`}>Back to results</Link>
+	// const getPage = (): string => (Math.ceil(Number(id) / API_LIMIT) - 1).toString()
+
+	return <Link href={`../list?page=${current}`}>Back to results</Link>
 }
 
 export default GoBackLink

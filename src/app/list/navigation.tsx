@@ -1,6 +1,12 @@
+'use client'
+
+import { useEffect } from 'react'
+
 import Link from 'next/link'
 
-import { API_SPECIES_COUNT, API_LIMIT } from '@/constants'
+import { useAppContext } from '@/providers/app-provider'
+
+import { API_PAGES_COUNT } from '@/constants'
 
 export default function Navigation({
 	prev,
@@ -13,11 +19,21 @@ export default function Navigation({
 	page: number
 	className?: string
 }) {
+	const { navigation } = useAppContext()
+	const { setCurrent } = navigation
+
+	const currentPage = navigation.current
+	console.log('navigation', currentPage)
+
+	useEffect(() => {
+		setCurrent(page)
+	}, [page, setCurrent])
+
 	return (
 		<nav
-			className={`flex items-center justify-between border-b border-slate-700 pb-8 ${className}`}
+			className={`grid grid-cols-3 items-center justify-between border-b border-slate-700 pb-8 ${className}`}
 		>
-			<div>
+			<div className='text-left'>
 				{prev && (
 					<Link
 						className='btn bg-secondary py-0 text-light'
@@ -28,11 +44,11 @@ export default function Navigation({
 				)}
 			</div>
 
-			<div>
-				{page + 1} / {Math.ceil(API_SPECIES_COUNT / API_LIMIT)}
+			<div className='text-center'>
+				{page + 1} / {API_PAGES_COUNT}
 			</div>
 
-			<div>
+			<div className='text-right'>
 				{next && (
 					<Link
 						className='btn bg-secondary py-0 text-light'

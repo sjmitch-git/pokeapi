@@ -8,7 +8,7 @@ export default function Results({ data, page }: { data: ResultsData; page: numbe
 	}
 
 	const getImage = (id: string) => {
-		return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`
+		return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`
 	}
 
 	return (
