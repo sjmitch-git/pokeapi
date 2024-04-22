@@ -15,9 +15,11 @@ export default function SearchBox() {
 	useEffect(() => {
 		const fetchData = async () => {
 			const responseData = await FetchData(`pokemon?limit=${API_SPECIES_TOTAL}`)
-			const modifiedData = responseData.results.map((item: Result) => {
-				return { ...item, id: getId(item.url) }
-			})
+			const modifiedData = responseData.results
+				.map((item: Result) => {
+					return { ...item, id: getId(item.url) }
+				})
+				.sort((a: Result, b: Result) => (a.name < b.name ? -1 : 1))
 			setData(modifiedData)
 		}
 		fetchData()
