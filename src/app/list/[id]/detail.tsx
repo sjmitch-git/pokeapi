@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { FaPlay, FaFastForward, FaFastBackward } from 'react-icons/fa'
 
 import { Heading, CustomImage } from '@/components'
 
@@ -13,6 +14,7 @@ import {
 	SPRITE_SUFFIX,
 	API_SPECIES_EXTRA_START,
 	API_SPECIES_EXTRA_END,
+	API_SPECIES_TOTAL,
 } from '@/constants'
 
 export default function Detail({ data }: { data: PokemonData }) {
@@ -71,25 +73,44 @@ export default function Detail({ data }: { data: PokemonData }) {
 				</div>
 			</div>
 			<nav className='grid grid-cols-2 items-center justify-between border-b border-slate-700 pb-8'>
-				<div className='text-left'>
+				<div className='flex justify-start gap-2'>
 					{Number(data.id) !== 1 && (
-						<Link
-							className='btn bg-secondary py-0 text-light'
-							href={getPrevLink(Number(data.id))}
-						>
-							&#9664; Prev
-						</Link>
+						<>
+							<Link
+								className='btn rounded bg-secondary text-light'
+								href={`./${1}`}
+							>
+								<FaFastBackward />{' '}
+								<span className='hidden md:inline-block'>First</span>
+							</Link>
+							<Link
+								className='btn rounded bg-secondary text-light'
+								href={getPrevLink(Number(data.id))}
+							>
+								<FaPlay className='rotate-180' />{' '}
+								<span className='hidden md:inline-block'>Prev</span>
+							</Link>
+						</>
 					)}
 				</div>
 
-				<div className='text-right'>
+				<div className='flex justify-end gap-2'>
 					{Number(data.id) < API_SPECIES_EXTRA_END && (
-						<Link
-							className='btn bg-secondary py-0 text-light'
-							href={getNextLink(Number(data.id))}
-						>
-							Next &#9654;
-						</Link>
+						<>
+							<Link
+								className='btn rounded bg-secondary text-light'
+								href={getNextLink(Number(data.id))}
+							>
+								<span className='hidden md:inline-block'>Next</span> <FaPlay />
+							</Link>
+							<Link
+								className='btn rounded bg-secondary text-light'
+								href={`./${10277}`}
+							>
+								<span className='hidden md:inline-block'>Last</span>
+								<FaFastForward />
+							</Link>
+						</>
 					)}
 				</div>
 			</nav>

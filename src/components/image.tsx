@@ -1,11 +1,15 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Image from 'next/image'
 
 const CustomImage = ({ src, name }: { src: string; name: string }) => {
 	const [error, setError] = useState<boolean>(false)
+
+	useEffect(() => {
+		setError(false)
+	}, [src])
 
 	return (
 		<Image

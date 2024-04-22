@@ -12,7 +12,7 @@ const config: Config = {
 				warning: 'var(--warning-color)',
 				danger: 'var(--danger-error)',
 				light: 'var(--light-color)',
-				dark: 'var(--dark-error)',
+				dark: 'var(--dark-color)',
 			},
 		},
 	},

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { FaPlay } from 'react-icons/fa'
 
 import { Heading } from '@/components'
 
@@ -9,12 +10,13 @@ export default function Home() {
 				label='Explore the world of Pokémon!'
 				className='text-center'
 			/>
-			<div className='py-36 text-center'>
+
+			<div className='flex justify-center py-36'>
 				<Link
 					href='/list'
-					className='btn bg-primary text-light'
+					className='btn xxl circle bg-primary text-light'
 				>
-					Browse
+					<span className='sr-only'>Browse</span> <FaPlay />
 				</Link>
 			</div>
 		</div>

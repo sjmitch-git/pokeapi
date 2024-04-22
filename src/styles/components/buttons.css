@@ -1,3 +1,65 @@
 .btn {
-	@apply inline-block rounded-md p-4 font-mono text-lg uppercase shadow-md shadow-slate-400 hover:scale-105;
+	@apply inline-flex items-center justify-center gap-2 p-2 font-mono text-base uppercase shadow-lg shadow-gray-500/50 hover:scale-105;
+
+	/* sizes */
+	&.sm {
+		@apply p-1 text-sm;
+	}
+
+	&.lg {
+		@apply p-3 text-lg;
+	}
+
+	&.xl {
+		@apply p-4 text-xl;
+	}
+
+	&.xxl {
+		@apply p-5 text-2xl;
+	}
+
+	/* layouts */
+	&.circle {
+		@apply aspect-square w-10  rounded-full;
+
+		/* widths */
+		&.sm {
+			@apply w-8;
+		}
+
+		&.lg {
+			@apply w-14;
+		}
+
+		&.xl {
+			@apply w-16;
+		}
+
+		&.xxl {
+			@apply w-20;
+		}
+	}
+
+	&.rounded {
+		/* radius sizes */
+		&.sm {
+			@apply rounded-sm;
+		}
+
+		&.lg {
+			@apply rounded-lg;
+		}
+
+		&.xl {
+			@apply rounded-xl;
+		}
+
+		&.xxl {
+			@apply rounded-2xl;
+		}
+	}
+
+	&.pill {
+		@apply rounded-full;
+	}
 }

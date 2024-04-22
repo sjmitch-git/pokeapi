@@ -13,7 +13,7 @@ interface CardProps {
 export default function Card({ image, name, link, className = '' }: CardProps) {
 	return (
 		<li className={`card ${className}`}>
-			<figure className='relative aspect-square'>
+			<figure className='relative hidden aspect-square md:block'>
 				<CustomImage
 					src={image}
 					name={name}
