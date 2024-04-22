@@ -105,7 +105,7 @@ export default function Detail({ data }: { data: PokemonData }) {
 							</Link>
 							<Link
 								className='btn rounded bg-secondary text-light'
-								href={`./${10277}`}
+								href={`./${API_SPECIES_EXTRA_END}`}
 							>
 								<span className='hidden md:inline-block'>Last</span>
 								<FaFastForward />
