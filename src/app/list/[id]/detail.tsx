@@ -14,7 +14,6 @@ import {
 	SPRITE_SUFFIX,
 	API_SPECIES_EXTRA_START,
 	API_SPECIES_EXTRA_END,
-	API_SPECIES_TOTAL,
 } from '@/constants'
 
 export default function Detail({ data }: { data: PokemonData }) {
@@ -41,19 +40,19 @@ export default function Detail({ data }: { data: PokemonData }) {
 
 	return (
 		<div>
-			<div className='mb-8 grid grid-cols-1 gap-4 md:grid-cols-2'>
+			<div className='mb-8 grid grid-cols-1 bg-black md:grid-cols-2'>
 				<div className=''>
-					<figure className='relative aspect-square'>
+					<figure className='relative aspect-square bg-dark'>
 						<CustomImage
 							src={getImage(data.id)}
 							name={data.name}
 						/>
 					</figure>
 				</div>
-				<div className=''>
+				<div className='p-4'>
 					<Heading
 						label='Abilities'
-						level={4}
+						level={2}
 					/>
 					<ul>
 						{data.abilities.map((item) => (
@@ -77,14 +76,14 @@ export default function Detail({ data }: { data: PokemonData }) {
 					{Number(data.id) !== 1 && (
 						<>
 							<Link
-								className='btn rounded bg-secondary text-light'
+								className='btn lg md:xl rounded bg-secondary text-light'
 								href={`./${1}`}
 							>
 								<FaFastBackward />{' '}
 								<span className='hidden md:inline-block'>First</span>
 							</Link>
 							<Link
-								className='btn rounded bg-secondary text-light'
+								className='btn lg md:xl rounded bg-secondary text-light'
 								href={getPrevLink(Number(data.id))}
 							>
 								<FaPlay className='rotate-180' />{' '}
@@ -98,13 +97,13 @@ export default function Detail({ data }: { data: PokemonData }) {
 					{Number(data.id) < API_SPECIES_EXTRA_END && (
 						<>
 							<Link
-								className='btn rounded bg-secondary text-light'
+								className='btn lg md:xl rounded bg-secondary text-light'
 								href={getNextLink(Number(data.id))}
 							>
 								<span className='hidden md:inline-block'>Next</span> <FaPlay />
 							</Link>
 							<Link
-								className='btn rounded bg-secondary text-light'
+								className='btn lg md:xl rounded bg-secondary text-light'
 								href={`./${API_SPECIES_EXTRA_END}`}
 							>
 								<span className='hidden md:inline-block'>Last</span>

@@ -1,0 +1,10 @@
+.bg-radial-sun-rays {
+	background-image: radial-gradient(
+		circle at center,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 0) 50%,
+		rgba(255, 255, 255, 0.5) 51%,
+		rgba(255, 255, 255, 0.5) 100%
+	);
+	background-size: 100px 100px;
+}

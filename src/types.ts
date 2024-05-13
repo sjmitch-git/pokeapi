@@ -25,3 +25,10 @@ export interface ResultsData {
 	previous: string | null
 	results: Result[]
 }
+
+export type NavigationContextProps = {
+	navigation: {
+		current: number
+		setCurrent: React.Dispatch<React.SetStateAction<number>>
+	}
+}

@@ -8,7 +8,10 @@ export default async function Page({ params }: { params: { id: string } }) {
 
 	return (
 		<div>
-			<Heading label={data.name} />
+			<Heading
+				label={data.name}
+				className='text-center'
+			/>
 			<Detail data={data} />
 			<nav className='p-4 text-center'>{params.id && <GoBackLink />}</nav>
 		</div>

@@ -1,5 +1,5 @@
 .card {
-	@apply relative flex flex-row border border-slate-200 p-4 shadow-md shadow-slate-400 md:flex-col md:hover:scale-105;
+	@apply relative flex flex-row border border-slate-600 bg-dark p-4 text-light shadow-md shadow-primary md:flex-col md:hover:scale-105;
 }
 
 .cards {

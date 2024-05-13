@@ -1,13 +1,20 @@
 import Link from 'next/link'
 import { FaPlay } from 'react-icons/fa'
 
+import { APP_DESCRIPTION, APP_TITLE } from '@/constants'
+
 import { Heading } from '@/components'
 
 export default function Home() {
 	return (
 		<div>
 			<Heading
-				label='Explore the world of Pokémon!'
+				label={APP_TITLE}
+				className='text-center'
+			/>
+			<Heading
+				label={APP_DESCRIPTION}
+				level={2}
 				className='text-center'
 			/>
 

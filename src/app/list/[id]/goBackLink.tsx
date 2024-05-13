@@ -2,15 +2,15 @@
 
 import Link from 'next/link'
 
-import { useAppContext } from '@/providers/app-provider'
+import { useNavigationContext } from '@/contexts/navigation.context'
 
 const GoBackLink = () => {
-	const { navigation } = useAppContext()
+	const { navigation } = useNavigationContext()
 	const { current } = navigation
 
 	return (
 		<Link
-			className='uppercase'
+			className='btn lg pill bg-secondary text-light'
 			href={`../list?page=${current}`}
 		>
 			Back to results

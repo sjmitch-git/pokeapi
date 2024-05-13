@@ -7,7 +7,7 @@ export default function Footer() {
 				<a
 					href='https://github.com/sjmitch-git/pokeapi'
 					target='_blank'
-					className='btn sm rounded border border-gray-400'
+					className='btn sm rounded  bg-light'
 				>
 					Made by Stephen
 				</a>

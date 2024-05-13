@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 import { FaPlay, FaFastForward, FaFastBackward } from 'react-icons/fa'
 
-import { useAppContext } from '@/providers/app-provider'
+import { useNavigationContext } from '@/contexts/navigation.context'
 
 import { API_PAGES_COUNT } from '@/constants'
 
@@ -21,7 +21,7 @@ export default function Navigation({
 	page: number
 	className?: string
 }) {
-	const { navigation } = useAppContext()
+	const { navigation } = useNavigationContext()
 	const { setCurrent } = navigation
 
 	useEffect(() => {
@@ -36,13 +36,13 @@ export default function Navigation({
 				{prev && (
 					<>
 						<Link
-							className='btn rounded bg-secondary text-light'
-							href={`list?page=${0}`}
+							className='btn lg md:xl rounded bg-secondary text-light'
+							href={`list?page=${1}`}
 						>
 							<FaFastBackward /> <span className='hidden md:inline-block'>First</span>
 						</Link>
 						<Link
-							className='btn rounded bg-secondary text-light'
+							className='btn lg md:xl rounded bg-secondary text-light'
 							href={`list?page=${page - 1}`}
 						>
 							<FaPlay className='rotate-180' />{' '}
@@ -53,21 +53,21 @@ export default function Navigation({
 			</div>
 
 			<div className='text-center'>
-				{page + 1} / {API_PAGES_COUNT}
+				{page} / {API_PAGES_COUNT}
 			</div>
 
 			<div className='flex justify-end gap-2'>
 				{next && (
 					<>
 						<Link
-							className='btn rounded bg-secondary text-light'
+							className='btn lg md:xl rounded bg-secondary text-light'
 							href={`list?page=${page + 1}`}
 						>
 							<span className='hidden md:inline-block'>Next</span> <FaPlay />
 						</Link>
 						<Link
-							className='btn rounded bg-secondary text-light'
-							href={`list?page=${API_PAGES_COUNT - 1}`}
+							className='btn lg md:xl rounded bg-secondary text-light'
+							href={`list?page=${API_PAGES_COUNT}`}
 						>
 							<span className='hidden md:inline-block'>Last</span> <FaFastForward />
 						</Link>

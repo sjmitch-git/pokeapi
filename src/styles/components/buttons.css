@@ -1,5 +1,5 @@
 .btn {
-	@apply inline-flex items-center justify-center gap-2 p-2 font-mono text-base uppercase shadow-lg shadow-gray-500/50 hover:scale-105;
+	@apply inline-flex items-center justify-center gap-2 p-2 font-mono text-base uppercase hover:scale-105;
 
 	/* sizes */
 	&.sm {

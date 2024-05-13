@@ -18,7 +18,6 @@ const CustomImage = ({ src, name }: { src: string; name: string }) => {
 			src={error ? '/image-break.png' : src}
 			fill
 			sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-			priority
 		/>
 	)
 }

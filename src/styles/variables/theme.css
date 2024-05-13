@@ -1,6 +1,6 @@
 :root {
-	--primary-color: var(--purple);
-	--secondary-color: var(--indigo);
+	--primary-color: var(--brand-blue-dark);
+	--secondary-color: var(--brand-blue-darkest);
 	--tertiary-color: var(--light-purple);
 
 	--dark-color: var(--black);
