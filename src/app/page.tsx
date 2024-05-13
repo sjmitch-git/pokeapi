@@ -18,10 +18,10 @@ export default function Home() {
 				className='text-center'
 			/>
 
-			<div className='flex justify-center py-36'>
+			<div className='flex justify-center py-24'>
 				<Link
 					href='/list'
-					className='btn xxl circle bg-primary text-light'
+					className='btn xxl circle border-8 border-light bg-primary text-light'
 				>
 					<span className='sr-only'>Browse</span> <FaPlay />
 				</Link>

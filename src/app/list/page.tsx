@@ -7,9 +7,22 @@ import getId from '@/utils/getId'
 import Results from './results'
 import { Heading } from '@/components'
 
+import { APP_BASE_URL, API_SPECIES_TOTAL } from '@/constants'
+
+const title = 'Pokémon Species'
+const description = `Explore ${API_SPECIES_TOTAL} Pokémon Species`
+
 export const metadata: Metadata = {
-	title: 'Pokémon Species',
-	description: 'APP_DESCRIPTION',
+	title: title,
+	description: description,
+	alternates: {
+		canonical: 'list',
+	},
+	openGraph: {
+		title: title,
+		description: description,
+		url: new URL(`${APP_BASE_URL}list`),
+	},
 }
 
 export default async function List({ searchParams }: { searchParams: { page: string | null } }) {

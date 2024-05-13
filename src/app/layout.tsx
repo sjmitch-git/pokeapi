@@ -22,10 +22,27 @@ export const metadata: Metadata = {
 	alternates: {
 		canonical: '/',
 	},
-	creator: APP_AUTHOR,
 	authors: [{ name: APP_AUTHOR, url: APP_AUTHOR_URL }],
 	verification: {
 		google: 'Ws4t6yaR0RsGkflU774SwgOj3duRsycUnDwyXY3SSD0',
+	},
+	openGraph: {
+		title: APP_TITLE,
+		description: APP_DESCRIPTION,
+		url: new URL(APP_BASE_URL),
+		siteName: APP_TITLE,
+		images: [
+			{
+				url: '/icon.png',
+				width: 512,
+				height: 512,
+			},
+		],
+		locale: 'en_GB',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
 	},
 }
 

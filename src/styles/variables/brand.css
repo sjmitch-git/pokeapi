@@ -1,7 +1,8 @@
 /* BRAND COLOURS */
 :root {
 	--brand-yellow: #ffcc01;
-	--brand-yellow-dark: #ab9905;
+	--brand-yellow-light: #ffc700;
+	--brand-yellow-dark: #fe9601;
 
 	--brand-blue: #0075ff;
 	--brand-blue-light: #00d3ff;
