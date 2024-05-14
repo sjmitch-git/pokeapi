@@ -17,6 +17,9 @@ export interface PokemonData {
 	id: string
 	name: string
 	abilities: Ability[]
+	cries: {
+		latest: string
+	}
 }
 
 export interface ResultsData {

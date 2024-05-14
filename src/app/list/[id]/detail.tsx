@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FaPlay, FaFastForward, FaFastBackward } from 'react-icons/fa'
 
-import { Heading, CustomImage } from '@/components'
+import { Audio, Heading, CustomImage } from '@/components'
 
 import { PokemonData } from '@/types'
 
@@ -17,6 +17,7 @@ import {
 } from '@/constants'
 
 export default function Detail({ data }: { data: PokemonData }) {
+	const audioSrc = data.cries.latest
 	const getAbilityDescription = (abilityId: number): string | null => {
 		const ability = abilityData.find((ability) => ability.id === abilityId)
 		return ability?.Description || null
@@ -54,7 +55,7 @@ export default function Detail({ data }: { data: PokemonData }) {
 						label='Abilities'
 						level={2}
 					/>
-					<ul>
+					<ul className='mb-8'>
 						{data.abilities.map((item) => (
 							<li
 								key={item.ability.name}
@@ -69,6 +70,13 @@ export default function Detail({ data }: { data: PokemonData }) {
 							</li>
 						))}
 					</ul>
+					<Heading
+						label='Cries'
+						level={2}
+					/>
+					<div>
+						<Audio src={audioSrc} />
+					</div>
 				</div>
 			</div>
 			<nav className='mb-4 grid grid-cols-2 items-center justify-between border-b border-slate-50 px-4 pb-8 md:px-0'>

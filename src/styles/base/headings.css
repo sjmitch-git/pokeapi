@@ -35,7 +35,7 @@ h4,
 
 h5,
 .h5 {
-	@apply mb-1 text-sm md:text-base lg:text-lg xl:text-xl;
+	@apply mb-1 text-base md:text-base lg:text-lg xl:text-xl;
 }
 
 h6,
