@@ -14,8 +14,8 @@ export default function Results({ data, page }: { data: ResultsData; page: numbe
 	}
 
 	return (
-		<div>
-			<ul className='cards'>
+		<div className='mb-8'>
+			<ul className='cards px-4'>
 				{data?.results.map((item, _index) => (
 					<Card
 						key={item.name}

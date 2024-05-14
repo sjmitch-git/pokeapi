@@ -13,7 +13,7 @@ const CustomImage = ({ src, name }: { src: string; name: string }) => {
 
 	return (
 		<Image
-			alt={name}
+			alt={`Image of ${name}`}
 			onError={() => setError(true)}
 			src={error ? '/image-break.png' : src}
 			fill

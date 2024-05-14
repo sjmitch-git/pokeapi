@@ -2,7 +2,7 @@ import Container from './container'
 
 export default function Footer() {
 	return (
-		<footer className='mt-auto pb-8'>
+		<footer className='mt-auto px-4 pb-8'>
 			<Container className='text-right'>
 				<a
 					href='https://github.com/sjmitch-git/pokeapi'

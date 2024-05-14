@@ -12,8 +12,9 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
+		"@next/third-parties": "^14.2.3",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-		"next": "14.2.1",
+		"next": "^14.2.3",
 		"react": "^18",
 		"react-dom": "^18",
 		"react-icons": "^5.1.0"

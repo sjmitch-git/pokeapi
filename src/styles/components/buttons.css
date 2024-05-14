@@ -15,29 +15,12 @@
 	}
 
 	&.xxl {
-		@apply p-5 text-2xl;
+		@apply p-5 text-4xl;
 	}
 
 	/* layouts */
 	&.circle {
-		@apply aspect-square w-10  rounded-full;
-
-		/* widths */
-		&.sm {
-			@apply w-8;
-		}
-
-		&.lg {
-			@apply w-14;
-		}
-
-		&.xl {
-			@apply w-16;
-		}
-
-		&.xxl {
-			@apply w-20;
-		}
+		@apply aspect-square rounded-full;
 	}
 
 	&.rounded {
@@ -60,6 +43,22 @@
 	}
 
 	&.pill {
-		@apply rounded-full;
+		@apply rounded-full px-4;
+
+		&.sm {
+			@apply px-3;
+		}
+
+		&.lg {
+			@apply px-5;
+		}
+
+		&.xl {
+			@apply px-6;
+		}
+
+		&.xxl {
+			@apply px-7;
+		}
 	}
 }

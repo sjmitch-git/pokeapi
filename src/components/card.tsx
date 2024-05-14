@@ -1,6 +1,5 @@
 import Link from 'next/link'
 
-import Heading from './heading'
 import CustomImage from './image'
 
 interface CardProps {
@@ -13,7 +12,7 @@ interface CardProps {
 export default function Card({ image, name, link, className = '' }: CardProps) {
 	return (
 		<li className={`card ${className}`}>
-			<figure className='relative hidden aspect-square md:block'>
+			<figure className='relative aspect-square min-w-24 md:w-full'>
 				<CustomImage
 					src={image}
 					name={name}
@@ -24,11 +23,7 @@ export default function Card({ image, name, link, className = '' }: CardProps) {
 				href={link}
 				className='stretched-link text-current'
 			>
-				<Heading
-					label={name}
-					level={5}
-					className='mb-0'
-				/>
+				<p className='h5 mb-0'>{name}</p>
 			</Link>
 		</li>
 	)

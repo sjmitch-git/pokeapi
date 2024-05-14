@@ -71,7 +71,7 @@ export default function Detail({ data }: { data: PokemonData }) {
 					</ul>
 				</div>
 			</div>
-			<nav className='grid grid-cols-2 items-center justify-between border-b border-slate-700 pb-8'>
+			<nav className='mb-4 grid grid-cols-2 items-center justify-between border-b border-slate-50 px-4 pb-8 md:px-0'>
 				<div className='flex justify-start gap-2'>
 					{Number(data.id) !== 1 && (
 						<>

@@ -38,7 +38,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: { params: { id: string } }) {
 	const data = await FetchData(`pokemon/${params.id}`)
-	console.log('PAGE')
 
 	return (
 		<div>
@@ -47,7 +46,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 				className='text-center'
 			/>
 			<Detail data={data} />
-			<nav className='p-4 text-center'>{params.id && <GoBackLink />}</nav>
+			<nav className='mb-4 p-4 text-center'>{params.id && <GoBackLink />}</nav>
 		</div>
 	)
 }

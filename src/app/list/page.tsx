@@ -22,6 +22,13 @@ export const metadata: Metadata = {
 		title: title,
 		description: description,
 		url: new URL(`${APP_BASE_URL}list`),
+		images: [
+			{
+				url: '/icon.png',
+				width: 512,
+				height: 512,
+			},
+		],
 	},
 }
 

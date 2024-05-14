@@ -1,10 +1,18 @@
 import type { Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
 import '@/styles/index.css'
 
 import { GlobalProvider } from '@/providers/global.provider'
 
-import { APP_TITLE, APP_DESCRIPTION, APP_BASE_URL, APP_AUTHOR, APP_AUTHOR_URL } from '@/constants'
+import {
+	APP_TITLE,
+	APP_DESCRIPTION,
+	APP_BASE_URL,
+	APP_AUTHOR,
+	APP_AUTHOR_URL,
+	GA_TAG,
+} from '@/constants'
 
 import Header from './header'
 import Footer from './footer'
@@ -55,6 +63,7 @@ export default function RootLayout({
 		<html lang='en'>
 			<GlobalProvider>
 				<body className={`${inter.className}`}>
+					<GoogleAnalytics gaId={GA_TAG} />
 					<Header />
 					<Container className='flex-grow'>{children}</Container>
 					<Footer />

@@ -7,7 +7,7 @@ import { Heading } from '@/components'
 
 export default function Home() {
 	return (
-		<div>
+		<div className='px-4'>
 			<Heading
 				label={APP_TITLE}
 				className='text-center'

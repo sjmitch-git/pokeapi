@@ -30,7 +30,7 @@ export default function Navigation({
 
 	return (
 		<nav
-			className={`grid grid-cols-3 items-center justify-between border-b border-slate-700 pb-8 ${className}`}
+			className={`grid grid-cols-3 items-center justify-between border-b border-slate-50 px-4 pb-8 ${className}`}
 		>
 			<div className='flex justify-start gap-2'>
 				{prev && (
@@ -52,7 +52,7 @@ export default function Navigation({
 				)}
 			</div>
 
-			<div className='text-center'>
+			<div className='text-center font-semibold text-dark'>
 				{page} / {API_PAGES_COUNT}
 			</div>
 

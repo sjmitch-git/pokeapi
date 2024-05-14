@@ -10,7 +10,7 @@ const GoBackLink = () => {
 
 	return (
 		<Link
-			className='btn lg pill bg-secondary text-light'
+			className='btn pill bg-secondary text-light'
 			href={`../list?page=${current}`}
 		>
 			Back to results
