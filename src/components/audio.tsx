@@ -61,7 +61,7 @@ const Audio = ({ src }: { src: string }) => {
 				<button
 					className='btn xl circle bg-primary'
 					onClick={isPlaying ? pause : play}
-					name='play audio'
+					title='Play Audio'
 				>
 					{isPlaying ? <FaPause /> : <FaVolumeUp />}
 				</button>
