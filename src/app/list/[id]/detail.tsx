@@ -62,11 +62,9 @@ export default function Detail({ data }: { data: PokemonData }) {
 								key={item.ability.name}
 								className='mb-2'
 							>
-								<Heading
-									label={item.ability.name.replaceAll('-', ' ')}
-									level={5}
-									className='opacity-75'
-								/>
+								<p className='h5 opacity-75'>
+									{item.ability.name.replaceAll('-', ' ')}
+								</p>
 								<p>{getAbilityDescription(Number(getId(item.ability.url)))}</p>
 							</li>
 						))}

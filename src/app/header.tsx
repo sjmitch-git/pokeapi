@@ -17,8 +17,8 @@ export default function Header() {
 						<Image
 							src='/logo.png'
 							alt='Poképea Logo'
-							width={1024}
-							height={460}
+							width={576}
+							height={259}
 							priority
 						/>
 					</Link>

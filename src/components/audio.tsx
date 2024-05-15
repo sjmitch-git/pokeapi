@@ -3,7 +3,7 @@
 import { sendGAEvent } from '@next/third-parties/google'
 
 import { useRef, useState, useEffect } from 'react'
-import { FaPlay, FaPause } from 'react-icons/fa'
+import { FaPause, FaVolumeUp } from 'react-icons/fa'
 
 const Audio = ({ src }: { src: string }) => {
 	const audioRef = useRef<HTMLAudioElement>(null)
@@ -61,8 +61,9 @@ const Audio = ({ src }: { src: string }) => {
 				<button
 					className='btn xl circle bg-primary'
 					onClick={isPlaying ? pause : play}
+					name='play audio'
 				>
-					{isPlaying ? <FaPause /> : <FaPlay />}
+					{isPlaying ? <FaPause /> : <FaVolumeUp />}
 				</button>
 			</div>
 		</div>
