@@ -6,7 +6,7 @@ import { SPRITE_PREFIX, SPRITE_SUFFIX } from '@/constants'
 
 export default function Results({ data, page }: { data: ResultsData; page: number }) {
 	const getLink = (id: string) => {
-		return `list/${id}`
+		return `/list/${id}`
 	}
 
 	const getImage = (id: string) => {

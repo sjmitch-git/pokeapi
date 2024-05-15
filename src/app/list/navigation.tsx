@@ -37,13 +37,13 @@ export default function Navigation({
 					<>
 						<Link
 							className='btn lg md:xl rounded bg-secondary text-light'
-							href={`list?page=${1}`}
+							href={`/list?page=${1}`}
 						>
 							<FaFastBackward /> <span className='hidden md:inline-block'>First</span>
 						</Link>
 						<Link
 							className='btn lg md:xl rounded bg-secondary text-light'
-							href={`list?page=${page - 1}`}
+							href={`/list?page=${page - 1}`}
 						>
 							<FaPlay className='rotate-180' />{' '}
 							<span className='hidden md:inline-block'>Prev</span>
@@ -61,13 +61,13 @@ export default function Navigation({
 					<>
 						<Link
 							className='btn lg md:xl rounded bg-secondary text-light'
-							href={`list?page=${page + 1}`}
+							href={`/list?page=${page + 1}`}
 						>
 							<span className='hidden md:inline-block'>Next</span> <FaPlay />
 						</Link>
 						<Link
 							className='btn lg md:xl rounded bg-secondary text-light'
-							href={`list?page=${API_PAGES_COUNT}`}
+							href={`/list?page=${API_PAGES_COUNT}`}
 						>
 							<span className='hidden md:inline-block'>Last</span> <FaFastForward />
 						</Link>

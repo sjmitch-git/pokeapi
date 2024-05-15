@@ -29,14 +29,14 @@ export default function Detail({ data }: { data: PokemonData }) {
 
 	const getPrevLink = (id: number) => {
 		if (id === API_SPECIES_EXTRA_START) {
-			return `./${API_SPECIES_COUNT}`
-		} else return `./${id - 1}`
+			return `/list/${API_SPECIES_COUNT}`
+		} else return `/list/${id - 1}`
 	}
 
 	const getNextLink = (id: number) => {
 		if (id === API_SPECIES_COUNT) {
-			return `./${API_SPECIES_EXTRA_START}`
-		} else return `./${id + 1}`
+			return `/list/${API_SPECIES_EXTRA_START}`
+		} else return `/list/${id + 1}`
 	}
 
 	return (
@@ -86,7 +86,7 @@ export default function Detail({ data }: { data: PokemonData }) {
 						<>
 							<Link
 								className='btn lg md:xl rounded bg-secondary text-light'
-								href={`./${1}`}
+								href={`/list/${1}`}
 							>
 								<FaFastBackward />{' '}
 								<span className='hidden md:inline-block'>First</span>
@@ -113,7 +113,7 @@ export default function Detail({ data }: { data: PokemonData }) {
 							</Link>
 							<Link
 								className='btn lg md:xl rounded bg-secondary text-light'
-								href={`./${API_SPECIES_EXTRA_END}`}
+								href={`/list/${API_SPECIES_EXTRA_END}`}
 							>
 								<span className='hidden md:inline-block'>Last</span>
 								<FaFastForward />
