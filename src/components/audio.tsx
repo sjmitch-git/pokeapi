@@ -5,6 +5,8 @@ import { sendGAEvent } from '@next/third-parties/google'
 import { useRef, useState, useEffect } from 'react'
 import { FaPause, FaVolumeUp } from 'react-icons/fa'
 
+import Button from './button'
+
 const Audio = ({ src }: { src: string }) => {
 	const audioRef = useRef<HTMLAudioElement>(null)
 	const [isPlaying, setIsPlaying] = useState<boolean>(false)
@@ -58,13 +60,13 @@ const Audio = ({ src }: { src: string }) => {
 				Your browser does not support the audio element.
 			</audio>
 			<div className='controls'>
-				<button
-					className='btn xl circle bg-primary'
+				<Button
+					className='xl circle bg-primary'
 					onClick={isPlaying ? pause : play}
 					title='Play Audio'
 				>
 					{isPlaying ? <FaPause /> : <FaVolumeUp />}
-				</button>
+				</Button>
 			</div>
 		</div>
 	)

@@ -43,7 +43,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 		<div>
 			<Heading
 				label={data.name}
-				className='text-center'
+				className='px-4 text-center'
 			/>
 			<Detail data={data} />
 			<nav className='mb-4 p-4 text-center'>{params.id && <GoBackLink />}</nav>

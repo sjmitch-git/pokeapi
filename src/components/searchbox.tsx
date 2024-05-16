@@ -4,13 +4,17 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import FetchData from '@/utils/fetchData'
 import getId from '@/utils/getId'
-import { Heading } from '@/components'
 import { API_SPECIES_TOTAL } from '@/constants'
 import { Result } from '@/types'
+
+import { FaSearch } from 'react-icons/fa'
+
+import Button from './button'
 
 export default function SearchBox() {
 	const router = useRouter()
 	const [data, setData] = useState<Result[]>([])
+	const [open, setOpen] = useState(false)
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -30,39 +34,44 @@ export default function SearchBox() {
 
 		if (selectedOption) {
 			router.push(`/list/${selectedOption.id}`)
+			setOpen(false)
 			e.target.blur()
 		}
 	}
 
+	const handleClick = () => {
+		setOpen(!open)
+	}
+
 	return (
-		<div className='border border-slate-100 bg-slate-50 p-2'>
-			<Heading
-				label='Search'
-				level={4}
-				className='text-slate-600'
+		<div className='relative flex flex-row'>
+			<input
+				className={`form-input text-dark transition-all ${open ? 'w-auto border-info' : 'w-0 border-0 px-0'}`}
+				id='species-choice'
+				name='species-choice'
+				type='text'
+				list='species'
+				placeholder='Select Name'
+				onChange={handleChange}
 			/>
-			<fieldset>
-				<input
-					className='form-input w-full border-slate-200'
-					id='species-choice'
-					name='species-choice'
-					type='text'
-					list='species'
-					placeholder='Select Name'
-					onChange={handleChange}
-				/>
-				<datalist
-					className=''
-					id='species'
-				>
-					{data.map((el: Result) => (
-						<option
-							key={el.id}
-							value={el.name}
-						/>
-					))}
-				</datalist>
-			</fieldset>
+			<Button
+				className='xl z-10 bg-dark'
+				onClick={handleClick}
+				title='Toggle Search'
+			>
+				<FaSearch />
+			</Button>
+			<datalist
+				className=''
+				id='species'
+			>
+				{data.map((el: Result) => (
+					<option
+						key={el.id}
+						value={el.name}
+					/>
+				))}
+			</datalist>
 		</div>
 	)
 }

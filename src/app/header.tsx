@@ -10,7 +10,7 @@ export default function Header() {
 	return (
 		<header>
 			<Container>
-				<figure className='mx-auto mb-4 max-w-xl'>
+				<figure className='mx-auto mt-8 max-w-xl'>
 					<Link
 						href='/'
 						className='relative inline-block h-full w-full'
@@ -27,9 +27,9 @@ export default function Header() {
 						/>
 					</Link>
 				</figure>
-				{/* <div className='absolute right-10 top-10'>
+				<div className='absolute right-0 top-0'>
 					<SearchBox />
-				</div> */}
+				</div>
 			</Container>
 		</header>
 	)
