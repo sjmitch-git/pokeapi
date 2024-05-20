@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Container from './container'
-import logo from '../../public/logo.png'
 
 import { SearchBox } from '@/components'
 
@@ -16,13 +15,10 @@ export default function Header() {
 						className='relative inline-block h-full w-full'
 					>
 						<Image
-							src={logo}
+							src='/logo.png'
 							alt='Poképea Logo'
-							sizes='100vw'
-							style={{
-								width: '100%',
-								height: 'auto',
-							}}
+							width={576}
+							height={259}
 							priority
 						/>
 					</Link>
