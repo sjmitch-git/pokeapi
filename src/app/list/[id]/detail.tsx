@@ -47,7 +47,6 @@ export default function Detail({ data }: { data: PokemonData }) {
 						<CustomImage
 							src={getImage(data.id)}
 							name={data.name}
-							priority={true}
 						/>
 					</figure>
 				</div>
