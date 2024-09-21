@@ -5,7 +5,7 @@ export default function Footer() {
 		<footer className='mt-auto px-4 pb-8'>
 			<Container className='text-right'>
 				<a
-					href='https://github.com/sjmitch-git/pokeapi'
+					href='https://mitchblog.vercel.app/'
 					target='_blank'
 					className='btn sm rounded  bg-light'
 				>
