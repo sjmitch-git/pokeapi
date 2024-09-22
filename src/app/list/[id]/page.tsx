@@ -11,6 +11,12 @@ type Props = {
 	params: { id: string }
 }
 
+let description = ''
+
+const getAbilities = (abilities: string) => {
+	description = abilities
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const id = params.id
 
@@ -18,7 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const title = data.name.toUpperCase()
 
 	return {
-		title: data.name.toUpperCase(),
+		title: title,
+		description: description,
 		alternates: {
 			canonical: `list/${id}`,
 		},
@@ -45,7 +52,10 @@ export default async function Page({ params }: { params: { id: string } }) {
 				label={data.name}
 				className='px-4 text-center'
 			/>
-			<Detail data={data} />
+			<Detail
+				data={data}
+				getAbilities={getAbilities}
+			/>
 			<nav className='mb-4 p-4 text-center'>{params.id && <GoBackLink />}</nav>
 		</div>
 	)

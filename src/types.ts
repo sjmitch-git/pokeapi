@@ -22,6 +22,13 @@ export interface PokemonData {
 	}
 }
 
+export interface AbilityProps {
+	id: number
+	Name: string
+	Description: string
+	'Gen.': string
+}
+
 export interface ResultsData {
 	count: string
 	next: string | null
