@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 	return {
 		title: title,
-		description: `${description} #${data.name} #Pokemon`,
+		description: `${description}`,
 		alternates: {
 			canonical: `list/${id}`,
 		},
