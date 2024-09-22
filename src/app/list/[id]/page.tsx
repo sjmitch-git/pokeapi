@@ -22,12 +22,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		.map((ability: Ability) => {
 			const abilityId = getId(ability.ability.url)
 			const abilityDetails = abilityData.find((ab) => ab.id === Number(abilityId))
-			return abilityDetails ? `${abilityDetails.Name}: ${abilityDetails.Description}` : null
+			return abilityDetails
+				? `${abilityDetails.Name.toUpperCase()} - ${abilityDetails.Description}`
+				: null
 		})
 		.filter(Boolean)
-		.join(', ')
+		.join(' ')
 
-	const description = `${title} abilities: ${abilities}`
+	const description = `${title} abilities: ${abilities} #${data.name} #Pokemon`
 
 	return {
 		title: title,
