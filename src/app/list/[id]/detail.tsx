@@ -3,7 +3,7 @@ import { FaPlay, FaFastForward, FaFastBackward } from 'react-icons/fa'
 
 import { Audio, Heading, CustomImage } from '@/components'
 
-import { PokemonData, AbilityProps } from '@/types'
+import { PokemonData } from '@/types'
 
 import abilityData from '@/data/ability.min.json'
 import getId from '@/utils/getId'
@@ -16,24 +16,10 @@ import {
 	API_SPECIES_EXTRA_END,
 } from '@/constants'
 
-export default function Detail({
-	data,
-	getAbilities,
-}: {
-	data: PokemonData
-	getAbilities: (string: string) => void
-}) {
-	let abilities = `${data.name.toUpperCase()} abilities -- `
-
-	const formatAbilities = (ability: AbilityProps) => {
-		abilities = abilities + `${ability.Name.toUpperCase()}: ${ability.Description} `
-		getAbilities(abilities)
-	}
-
+export default function Detail({ data }: { data: PokemonData }) {
 	const audioSrc = data.cries.latest
 	const getAbilityDescription = (abilityId: number): string | null => {
 		const ability = abilityData.find((ability) => ability.id === abilityId)
-		if (ability) formatAbilities(ability)
 		return ability?.Description || null
 	}
 
