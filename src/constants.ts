@@ -1,5 +1,8 @@
 const APP_TITLE: string = 'Poképea'
 const APP_DESCRIPTION: string = 'Explore the world of Pokémon!'
+const APP_KEYWORDS: string =
+	"Pokémon Species, Pokémon List, Pokémon Database, Pokémon Information, Pokémon Types, Pokémon Details, Explore Pokémon, Pokémon Names, Catch 'Em All, Pokémon Sprites, Pokémon Wiki, Pokémon Stats, Pokémon Trivia, Complete Pokémon species database, Information about Pokémon species, Pokémon types and abilities, Guide to Pokémon"
+
 const APP_BASE_URL: string = 'https://pokepea.vercel.app/'
 const APP_AUTHOR: string = 'Stephen Mitchell'
 const APP_AUTHOR_URL: string = 'https://mitchblog.vercel.app/'
@@ -23,6 +26,7 @@ const GA_TAG = 'G-42BF33Z2LV'
 export {
 	APP_TITLE,
 	APP_DESCRIPTION,
+	APP_KEYWORDS,
 	APP_BASE_URL,
 	APP_AUTHOR,
 	APP_AUTHOR_URL,

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 import Container from './container'
@@ -14,12 +13,11 @@ export default function Header() {
 						href='/'
 						className='relative inline-block h-full w-full'
 					>
-						<Image
+						<img
 							src='/logo.png'
 							alt='Poképea Logo'
 							width={576}
 							height={259}
-							priority
 						/>
 					</Link>
 				</figure>

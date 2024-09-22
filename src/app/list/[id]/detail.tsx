@@ -23,10 +23,10 @@ export default function Detail({
 	data: PokemonData
 	getAbilities: (string: string) => void
 }) {
-	let abilities = `${data.name.toUpperCase()} abilities | `
+	let abilities = `${data.name.toUpperCase()} abilities -- `
 
 	const formatAbilities = (ability: AbilityProps) => {
-		abilities = abilities + `${ability.Name}: ${ability.Description} `
+		abilities = abilities + `${ability.Name.toUpperCase()}: ${ability.Description} `
 		getAbilities(abilities)
 	}
 
